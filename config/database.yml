@@ -85,5 +85,3 @@ test:
 production:
   <<: *default
   database: fullwork_web_production
-  username: fullwork_web
-  password: <%= ENV['FULLWORK_WEB_DATABASE_PASSWORD'] %>
