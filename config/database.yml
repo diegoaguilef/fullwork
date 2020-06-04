@@ -84,4 +84,7 @@ test:
 #
 production:
   <<: *default
+  host: db
+  user: postgres
+  password: postgres
   database: fullwork_web_production
