@@ -1,10 +1,5 @@
 class HomeController < ApplicationController
-
+  layout 'landing'
   def index
-    render layout: 'landing_page'
   end
-
-  def sample
-  end
-
 end

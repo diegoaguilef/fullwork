@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/fullweb-webapp.iml" filepath="$PROJECT_DIR$/.idea/fullweb-webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cefit-web.iml" filepath="$PROJECT_DIR$/.idea/cefit-web.iml" />
     </modules>
   </component>
 </project>

@@ -1,15 +1,41 @@
 {
-  "name": "fullwork_web",
+  "title": "CEFIT Webpage",
+  "name": "cefit_web",
+  "author": "Diego Aguilef",
+  "version": "1.0.2",
+  "scripts": {
+    "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+    "build:assets": "node scripts/build-assets.js",
+    "build:pug": "node scripts/build-pug.js",
+    "build:scripts": "node scripts/build-scripts.js",
+    "build:scss": "node scripts/build-scss.js",
+    "clean": "node scripts/clean.js",
+    "start": "npm run build && node scripts/start.js",
+    "start:debug": "npm run build && node scripts/start-debug.js"
+  },
+  "description": "A premium admin dashboard theme based on Bootstrap 4, created by Start Bootstrap.",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "bootstrap": "4.4.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0"
   },
-  "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "autoprefixer": "9.7.4",
+    "browser-sync": "2.26.7",
+    "chokidar": "3.3.1",
+    "concurrently": "5.1.0",
+    "postcss": "7.0.27",
+    "prettier": "1.19.1",
+    "pug": "2.0.4",
+    "sass": "1.25.0",
+    "shelljs": "0.8.3",
+    "upath": "1.2.0"
   }
 }

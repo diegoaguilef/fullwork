@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>CeFit</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png"/>
+  <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="layoutDefault">
+  <div id="layoutDefault_content">
+    <main>
+      <nav class="navbar navbar-marketing navbar-expand-lg bg-white navbar-light">
+        <div class="container">
+          <a class="navbar-brand text-primary" href="index.html">CeFit</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-lg-5">
+              <li class="nav-item"><a class="nav-link" href="home/index">Inicio </a></li>
+              <li class="nav-item dropdown dropdown-lg no-caret"><a class="nav-link dropdown-toggle" role="button" href="#" >Nosotros<i class="fas fa-chevron-right dropdown-arrow"></i></a></li>
+              <li class="nav-item dropdown dropdown-lg no-caret"><a class="nav-link dropdown-toggle" role="button" href="#" >Precios<i class="fas fa-chevron-right dropdown-arrow"></i></a></li>
+              <li class="nav-item dropdown dropdown-lg no-caret"><a class="nav-link dropdown-toggle" role="button" href="#" >Blog<i class="fas fa-chevron-right dropdown-arrow"></i></a></li>
+            </ul>
+            <a class="btn btn-primary rounded-pill px-4 ml-lg-4" href="#">Prueba Gratuita<i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+      </nav>
+      <%= yield %>
+    </main>
+  </div>
+  <div id="layoutDefault_footer">
+    <footer class="footer pt-10 pb-5 mt-auto bg-dark footer-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="footer-brand">CeFit</div>
+            <div class="mb-3">Vive Mejor</div>
+            <div class="icon-list-social mb-5">
+              <a class="icon-list-social-link" href="javascript:void(0);"><i class="fab fa-instagram"></i></a><a class="icon-list-social-link" href="javascript:void(0);"><i class="fab fa-facebook"></i></a><a class="icon-list-social-link" href="javascript:void(0);"><i class="fab fa-github"></i></a><a class="icon-list-social-link" href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                <div class="text-uppercase-expanded text-xs mb-4">Producto</div>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2"><a href="javascript:void(0);">Nosotros</a></li>
+                  <li class="mb-2"><a href="javascript:void(0);">funcionanlidades</a></li>
+                  <li class="mb-2"><a href="javascript:void(0);">Precios</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                <div class="text-uppercase-expanded text-xs mb-4">Media</div>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2"><a href="javascript:void(0);">Blog</a></li>
+                  <li class="mb-2"><a href="javascript:void(0);">Trabaja con Nosotros</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                <div class="text-uppercase-expanded text-xs mb-4">Recursos</div>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2"><a href="javascript:void(0);">Preguntas Frecuentes</a></li>
+                  <li class="mb-2"><a href="javascript:void(0);">Términos y condiciones</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-5" />
+        <div class="row align-items-center">
+          <div class="col-md-6 small">Copyright &copy; Your Website 2020</div>
+
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+<%= javascript_packs_with_chunks_tag('application', params[:controller]) %>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        disable: 'mobile',
+        duration: 600,
+        once: true
+    });
+</script>
+</body>
+</html>
