@@ -1,4 +1,12 @@
-<header class="page-header page-header-dark bg-img-cover overlay overlay-80" style='background-image: url("https://source.unsplash.com/faEfWCdOKIg/1500x900")'>
+<header class="page-header page-header-dark overlay overlay-80" id="slide-show">
+  <!--<ul class="cb-slideshow">
+    <li><span>Image 01</span><div><h3>re·lax·a·tion</h3></div></li>
+    <li><span>Image 02</span><div><h3>qui·e·tude</h3></div></li>
+    <li><span>Image 03</span><div><h3>bal·ance</h3></div></li>
+    <li><span>Image 04</span><div><h3>e·qua·nim·i·ty</h3></div></li>
+    <li><span>Image 05</span><div><h3>com·po·sure</h3></div></li>
+    <li><span>Image 06</span><div><h3>se·ren·i·ty</h3></div></li>
+  </ul>-->
   <div class="page-header-content py-5">
     <div class="container">
       <div class="row justify-content-center">
@@ -7,8 +15,17 @@
             <h1 class="page-header-title">Cambia tu estilo de vida, todo en un lugar</h1>
             <p class="page-header-text">Entrena desde casa, planifica tu alimentación y mantén tu mente saludable.</p>
           </div>
-          <button class="btn btn-marketing rounded-pill btn-primary" data-aos="fade-up" data-aos-delay="100">Prueba Gratis</button>
-          <button class="btn btn-marketing rounded-pill btn-white" data-aos="fade-up" data-aos-delay="100">Login</button>
+          <%- if !user_signed_in? %>
+            <button class="btn btn-marketing rounded-pill btn-primary" data-aos="fade-up" data-aos-delay="100">Prueba Gratis</button>
+            <%= link_to "Login", new_session_path(:user),
+                        class: "btn btn-marketing rounded-pill btn-white",
+                        'data-aos': "fade-up", 'data-aos-delay': "100" %><br />
+
+            <% else %>
+            <%= link_to "Mi Cuenta", dashboard_index_path,
+                        class: "btn btn-marketing rounded-pill btn-primary",
+                        'data-aos': "fade-up", 'data-aos-delay': "100" %><br />
+        <% end %>
         </div>
       </div>
     </div>

@@ -1,3 +1,26 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@keyframes sliderBg {
+  0% {
+    background-image: url(asset-path("landing/banner1.jpg"));
+  }
+  50% {
+    background-image: url(asset-path("landing/banner2.jpg"));
+  }
+  100% {
+    background-image: url(asset-path("landing/banner3.jpg"));
+  }
+}
+
+#slide-show {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: sliderBg 9s alternate-reverse infinite 3s;
+  animation-timing-function: ease-in-out;
+  background-image: url(asset-path("landing/banner1.jpg"));
+}
