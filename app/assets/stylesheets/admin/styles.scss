@@ -20,7 +20,11 @@
 // * * Import layouts  * *
 // * * * * * * * * * * * *
 
-@import './layout/default.scss';
+@import './layout/authentication.scss';
+@import './layout/dashboard-default.scss';
+@import './layout/dashboard-fixed.scss';
+@import './layout/dashboard-rtl.scss';
+@import './layout/error.scss';
 
 // * * * * * * * * * * * * *
 // * * Import utilities  * *
@@ -31,9 +35,10 @@
 @import './utilities/border.scss';
 @import './utilities/dropdown.scss';
 @import './utilities/general.scss';
-@import './utilities/images.scss';
 @import './utilities/lift.scss';
+@import './utilities/overflow.scss';
 @import './utilities/shadow.scss';
+@import './utilities/skew.scss';
 @import './utilities/text.scss';
 @import './utilities/zindex.scss';
 
@@ -55,8 +60,6 @@
 @import './components/buttons/social.scss';
 @import './components/buttons/transparent.scss';
 
-@import './components/buttons/marketing.scss';
-
 // -- Cards
 @import './components/cards/global.scss';
 @import './components/cards/advanced.scss';
@@ -65,16 +68,20 @@
 @import './components/cards/scrollable.scss';
 @import './components/cards/progress.scss';
 @import './components/cards/link.scss';
-@import './components/cards/portfolio.scss';
 @import './components/cards/flags.scss';
+
+// -- Page header
+@import './components/page-header/page-header.scss';
+@import './components/page-header/page-header-dark.scss';
+@import './components/page-header/page-header-light.scss';
 
 // -- Forms
 @import './components/forms/checkboxes.scss';
 @import './components/forms/form-control.scss';
 
 // -- Navigation
+@import './components/navigation/nav.scss';
 @import './components/navigation/navbar.scss';
-@import './components/navigation/navbar-marketing.scss';
 @import './components/navigation/topnav.scss';
 @import './components/navigation/nav-sticky.scss';
 @import './components/navigation/sidenav/sidenav.scss';
@@ -85,7 +92,9 @@
 @import './components/dropdowns/global.scss';
 @import './components/dropdowns/user.scss';
 @import './components/dropdowns/notifications.scss';
-@import './components/dropdowns/mega.scss';
+
+// -- Footer
+@import './components/footer.scss';
 
 // -- Icons
 @import './components/icons.scss';
@@ -108,27 +117,31 @@
 // -- List Group
 @import './components/list-group.scss';
 
-// * * * * * * * * * * * * * * *
-// * * Import section styles * *
-// * * * * * * * * * * * * * * *
-
-@import './sections/borders.scss';
-@import './sections/header.scss';
-@import './sections/footer.scss';
-@import './sections/device.scss';
-@import './sections/brands.scss';
-@import './sections/testimonials.scss';
-@import './sections/pricing.scss';
-@import './sections/blog.scss';
-
 // * * * * * * * * * * * * * *
 // * * Import page styles  * *
 // * * * * * * * * * * * * * *
+
+// -- Multi-tenant flow pages
+@import './pages/auth-organizations.scss';
 
 // -- Error page effect
 @import './pages/error.scss';
 
 // * * * * * * * * * * * * * * *
-// * * Import custom styles  * *
+// * * Import plugin styles  * *
 // * * * * * * * * * * * * * * *
+
+@import './vendor/datatables.scss';
+@import './vendor/chartjs.scss';
+
+// * * * * * * * * * * * * * *
+// * * Import demo styles  * *
+// * * * * * * * * * * * * * *
+
+@import './pages/style-reference.scss';
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * * Import custom styles - add your own custom styles here! * *
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
 @import './project-global.scss';

@@ -1,3 +1,61 @@
+<div id="layoutAuthentication">
+  <div id="layoutAuthentication_content">
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+              <div class="card-header justify-content-center"><h3 class="font-weight-light my-4">Login</h3></div>
+              <div class="card-body">
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                  <div class="form-group">
+                    <%= f.label :email, class: 'small mb-1' %>
+                    <%= f.email_field :email, class: 'form-control py-4', placeholder: 'Ingresar Email' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :password, class: 'small mb-1' %>
+                    <%= f.password_field :password, class: 'form-control py-4', placeholder: 'Ingresar Password' %>
+                  </div>
+                  <% if devise_mapping.rememberable? %>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                        <%= f.check_box :remember_me, class: 'custom-control-input' %>
+                        <%= f.label :remember_me, 'Recordarme', class: 'custom-control-label' %>
+                      </div>
+                    </div>
+                  <% end %>
+                  <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                    <%= f.submit 'Login', class: 'btn btn-primary' %>
+                  </div>
+                <% end %>
+                <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                  <%= link_to "¿Olvidaste tu contraseña?", new_password_path(resource_name), class: 'small pull-left' %><br />
+                <% end %>
+              </div>
+              <div class="card-footer text-center">
+                <div class="small"><%= link_to '¿Necesitas una cuenta? ¡Registrate!', home_join_path, class: 'small' %></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="layoutAuthentication_footer">
+    <footer class="footer mt-auto footer-dark">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 small">Copyright &copy; Your Website 2020</div>
+          <div class="col-md-6 text-md-right small">
+            <a href="#!">Privacy Policy</a>
+            &middot;
+            <a href="#!">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>

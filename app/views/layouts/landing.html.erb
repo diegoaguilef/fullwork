@@ -7,7 +7,7 @@
   <meta name="description" content=""/>
   <meta name="author" content=""/>
   <title>CeFit</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'landing/styles', media: 'all', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.png"/>
   <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
@@ -23,11 +23,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mr-lg-5">
               <li class="nav-item"><a class="nav-link" href="home/index">Inicio </a></li>
-              <li class="nav-item dropdown dropdown-lg no-caret"><a class="nav-link dropdown-toggle" role="button" href="#" >Nosotros<i class="fas fa-chevron-right dropdown-arrow"></i></a></li>
-              <li class="nav-item dropdown dropdown-lg no-caret"><a class="nav-link dropdown-toggle" role="button" href="#" >Precios<i class="fas fa-chevron-right dropdown-arrow"></i></a></li>
-              <li class="nav-item dropdown dropdown-lg no-caret"><a class="nav-link dropdown-toggle" role="button" href="#" >Blog<i class="fas fa-chevron-right dropdown-arrow"></i></a></li>
+              <li class="nav-item dropdown dropdown-lg no-caret"><a class="nav-link dropdown-toggle" role="button" href="#" >Nosotros</a></li>
+              <li class="nav-item dropdown dropdown-lg no-caret"><a class="nav-link dropdown-toggle" role="button" href="#" >Precios</a></li>
+              <li class="nav-item dropdown dropdown-lg no-caret"><a class="nav-link dropdown-toggle" role="button" href="#" >Blog</a></li>
             </ul>
-            <a class="btn btn-primary rounded-pill px-4 ml-lg-4" href="#">Prueba Gratuita<i class="fas fa-arrow-right ml-1"></i></a>
+            <%= link_to 'Prueba Gratiuita <i class="fas fa-arrow-right ml-1"></i>'.html_safe, home_join_path,
+                        class: 'btn btn-primary rounded-pill px-4 ml-lg-4' %>
           </div>
         </div>
       </nav>

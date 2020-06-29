@@ -16,7 +16,9 @@
             <p class="page-header-text">Entrena desde casa, planifica tu alimentación y mantén tu mente saludable.</p>
           </div>
           <%- if !user_signed_in? %>
-            <button class="btn btn-marketing rounded-pill btn-primary" data-aos="fade-up" data-aos-delay="100">Prueba Gratis</button>
+            <%= link_to 'Prueba Gratis', home_join_path,
+                        class: 'btn btn-marketing rounded-pill btn-primary',
+                        'data-aos': 'fade-up', 'data-aos-delay': '100' %>
             <%= link_to "Login", new_session_path(:user),
                         class: "btn btn-marketing rounded-pill btn-white",
                         'data-aos': "fade-up", 'data-aos-delay': "100" %><br />
@@ -423,7 +425,7 @@
     </div>
   </div>
 </section>
-<section class="bg-img-cover overlay overlay-primary overlay-80 pt-15" style='background-image: url("https://source.unsplash.com/e3OUQGT9bWU/1400x900")'>
+<section class="bg-img-cover overlay overlay-primary overlay-80 pt-15" style='background-image: url("<%= image_url 'landing/footer.jpg' %>")'>
   <div style="height: 35vh;"></div>
   <div class="svg-border-rounded text-white">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>

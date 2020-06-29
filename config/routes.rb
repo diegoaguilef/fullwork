@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: redirect('/home'), as: :landing_page
   get '/home', to: 'home#index'
-
+  get '/home/join', to: 'home#join'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations',
