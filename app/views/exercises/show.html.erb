@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Target:</strong>
+  <%= @exercise.target %>
+</p>
+
+<p>
+  <strong>Nivel:</strong>
+  <%= @exercise.nivel %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @exercise.style_id %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>

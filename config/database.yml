@@ -23,7 +23,7 @@ default: &default
   host: localhost
   port: 5434
   user: postgres
-  password: postgres
+  password: diego123
 
 development:
   <<: *default

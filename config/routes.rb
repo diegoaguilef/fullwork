@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :activities
+  resources :nutritions
+  resources :exercises
+  resources :healths
+  resources :styles
+  resources :equipment
+  devise_for :members
   root to: redirect('/home'), as: :landing_page
   get '/home', to: 'home#index'
   get '/home/join', to: 'home#join'
