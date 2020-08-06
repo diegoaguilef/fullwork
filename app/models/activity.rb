@@ -1,3 +1,13 @@
+##
+# ==== Attributes
+# - title
+# - content
+# - summary
+# - image
+# - author
+# - tag
+# - equipment
+# - duration
 class Activity < ApplicationRecord
   belongs_to :tag
   belongs_to :equipment

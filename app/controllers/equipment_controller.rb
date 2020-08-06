@@ -1,5 +1,5 @@
 class EquipmentController < ApplicationController
-  before_action :set_equipment, only: [:show, :edit, :update, :destroy]
+  before_action :set_equipment, only: %i[show edit update destroy]
 
   # GET /equipment
   # GET /equipment.json
@@ -9,8 +9,7 @@ class EquipmentController < ApplicationController
 
   # GET /equipment/1
   # GET /equipment/1.json
-  def show
-  end
+  def show; end
 
   # GET /equipment/new
   def new
@@ -18,8 +17,7 @@ class EquipmentController < ApplicationController
   end
 
   # GET /equipment/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /equipment
   # POST /equipment.json
@@ -62,13 +60,14 @@ class EquipmentController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_equipment
-      @equipment = Equipment.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def equipment_params
-      params.require(:equipment).permit(:name, :type)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_equipment
+    @equipment = Equipment.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def equipment_params
+    params.require(:equipment).permit(:name, :type)
+  end
 end

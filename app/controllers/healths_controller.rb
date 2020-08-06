@@ -1,5 +1,5 @@
 class HealthsController < ApplicationController
-  before_action :set_health, only: [:show, :edit, :update, :destroy]
+  before_action :set_health, only: %i[show edit update destroy]
 
   # GET /healths
   # GET /healths.json
@@ -9,8 +9,7 @@ class HealthsController < ApplicationController
 
   # GET /healths/1
   # GET /healths/1.json
-  def show
-  end
+  def show; end
 
   # GET /healths/new
   def new
@@ -18,8 +17,7 @@ class HealthsController < ApplicationController
   end
 
   # GET /healths/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /healths
   # POST /healths.json
@@ -62,13 +60,14 @@ class HealthsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_health
-      @health = Health.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def health_params
-      params.require(:health).permit(:type)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_health
+    @health = Health.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def health_params
+    params.require(:health).permit(:type)
+  end
 end

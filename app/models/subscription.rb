@@ -1,10 +1,10 @@
+#:nodoc:
 class Subscription < ApplicationRecord
   belongs_to :group
   belongs_to :duration
   belongs_to :subscribable, polymorphic: true
 
   before_validation :start_subscription, on: :create
-
 
   private
 

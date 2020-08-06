@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   resources :healths
   resources :styles
   resources :equipment
-  devise_for :members
+  devise_for :members, controllers: {
+    sessions: 'members/sessions',
+    registrations: 'members/registrations',
+    confirmations: 'members/confirmations'
+  }
   root to: redirect('/home'), as: :landing_page
   get '/home', to: 'home#index'
   get '/home/join', to: 'home#join'

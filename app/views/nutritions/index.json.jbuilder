@@ -1,1 +1,1 @@
-json.array! @nutritions, partial: "nutritions/nutrition", as: :nutrition
+json.array! @nutritions, partial: 'nutritions/nutrition', as: :nutrition

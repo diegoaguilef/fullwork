@@ -1,5 +1,4 @@
-# frozen_string_literal: true
-
+#:nodoc:
 class Nutrition < ApplicationRecord
   has_many :subscriptions, as: :subscribable
   has_many :assingments, as: :assignable

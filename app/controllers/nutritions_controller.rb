@@ -1,5 +1,5 @@
 class NutritionsController < ApplicationController
-  before_action :set_nutrition, only: [:show, :edit, :update, :destroy]
+  before_action :set_nutrition, only: %i[show edit update destroy]
 
   # GET /nutritions
   # GET /nutritions.json
@@ -9,8 +9,7 @@ class NutritionsController < ApplicationController
 
   # GET /nutritions/1
   # GET /nutritions/1.json
-  def show
-  end
+  def show; end
 
   # GET /nutritions/new
   def new
@@ -18,8 +17,7 @@ class NutritionsController < ApplicationController
   end
 
   # GET /nutritions/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /nutritions
   # POST /nutritions.json
@@ -62,13 +60,14 @@ class NutritionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_nutrition
-      @nutrition = Nutrition.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def nutrition_params
-      params.require(:nutrition).permit(:type, :diet)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_nutrition
+    @nutrition = Nutrition.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def nutrition_params
+    params.require(:nutrition).permit(:type, :diet)
+  end
 end

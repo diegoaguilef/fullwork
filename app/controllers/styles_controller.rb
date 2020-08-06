@@ -1,5 +1,5 @@
 class StylesController < ApplicationController
-  before_action :set_style, only: [:show, :edit, :update, :destroy]
+  before_action :set_style, only: %i[show edit update destroy]
 
   # GET /styles
   # GET /styles.json
@@ -9,8 +9,7 @@ class StylesController < ApplicationController
 
   # GET /styles/1
   # GET /styles/1.json
-  def show
-  end
+  def show; end
 
   # GET /styles/new
   def new
@@ -18,8 +17,7 @@ class StylesController < ApplicationController
   end
 
   # GET /styles/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /styles
   # POST /styles.json
@@ -62,13 +60,14 @@ class StylesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_style
-      @style = Style.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def style_params
-      params.require(:style).permit(:name, :type)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_style
+    @style = Style.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def style_params
+    params.require(:style).permit(:name, :type)
+  end
 end

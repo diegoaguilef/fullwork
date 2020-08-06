@@ -1,3 +1,4 @@
+#:nodoc:
 class Exercise < ApplicationRecord
   belongs_to :style
   has_many :subscriptions, as: :subscribable
